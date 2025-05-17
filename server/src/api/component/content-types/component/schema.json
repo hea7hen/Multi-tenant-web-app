@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "components",
+  "info": {
+    "singularName": "component",
+    "pluralName": "components",
+    "displayName": "Component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Hero",
+        "Services",
+        "Testimonials",
+        "PricingTable"
+      ],
+      "required": true
+    },
+    "content": {
+      "type": "json"
+    },
+    "settings": {
+      "type": "json"
+    }
+  }
+}

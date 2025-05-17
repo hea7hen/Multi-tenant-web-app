@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants",
+  "info": {
+    "singularName": "tenant",
+    "pluralName": "tenants",
+    "displayName": "Tenant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "theme_configuration": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::theme-configuration.theme-configuration",
+      "inversedBy": "tenant"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page",
+      "mappedBy": "tenant"
+    }
+  }
+}

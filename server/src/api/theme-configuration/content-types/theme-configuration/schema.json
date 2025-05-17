@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "theme_configurations",
+  "info": {
+    "singularName": "theme-configuration",
+    "pluralName": "theme-configurations",
+    "displayName": "Theme Configuration"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "config": {
+      "type": "json"
+    },
+    "tenant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tenant.tenant",
+      "mappedBy": "theme_configuration"
+    }
+  }
+}
